@@ -12,7 +12,7 @@
     },
     "scripts": {
         "wdio": "wdio run ./wdio.conf.ts",
-        "report:generate": "npm run restoreHistory && npx allure generate --clean ./out/allure-result/ -o ./out/allure-report && npm run saveHistory",
+        "report:generate": "npx allure generate --clean ./out/allure-result/ -o ./out/allure-report && npm run saveHistory",
         "report:open": "npx allure open out/allure-report",
         "saveNewHistory": "copyfiles -f out/allure-report/history/*.json c:\\allureHistory",
         "restoreHistory": "copyfiles -f c:\\allureHistory\\*.json out/allure-result/history",
